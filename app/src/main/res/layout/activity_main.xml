@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    >
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/ll1">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8sp"
+            android:id="@+id/btnblue"
+            android:text="Blue"
+            android:textSize="20sp"
+            android:shadowColor="@color/black"
+            android:backgroundTint="#103CC3"
+            />
+        <Button
+            android:id="@+id/btnblack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8sp"
+            android:text="Black"
+            android:textSize="20sp"
+            android:shadowColor="@color/black"
+            android:backgroundTint="@color/black"
+
+            />
+        <Button
+            android:id="@+id/btnred"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8sp"
+            android:text="red"
+            android:textSize="20sp"
+            android:shadowColor="@color/black"
+            android:backgroundTint="#E91E1E"
+            />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/ll2"
+        android:layout_below="@id/ll1">
+    <TextView
+        android:id="@+id/tvpressed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="pressed"
+        android:layout_marginStart="10sp"
+        android:textSize="25sp"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/black"
+        android:layout_below="@id/ll1"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3sp"
+            android:text=""
+            android:layout_marginEnd="3sp"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:id="@+id/tvno"
+            />
+        <TextView
+            android:id="@+id/tvtimes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="times"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            />
+
+        <Button
+            android:id="@+id/btnclearall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="clear All"
+            android:layout_marginStart="26sp"
+            android:backgroundTint="@color/material_on_surface_stroke"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ll2"
+        android:id="@+id/fcv"
+        android:name="com.rare.colorinterface.BlankFragment"/>
+
+</RelativeLayout>
